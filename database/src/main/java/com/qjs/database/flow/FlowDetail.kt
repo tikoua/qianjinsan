@@ -12,6 +12,10 @@ data class FlowDetail(
     @PrimaryKey(autoGenerate = true)
     val id: Long? = null,
     /**
+     * 记录生成的时间:ms
+     */
+    var createTime: Long,
+    /**
      * 流水类型[com.qjs.database.flow.FlowType]
      */
     var flowType: Int,
@@ -20,12 +24,18 @@ data class FlowDetail(
      */
     var amount: Int,
     /**
-     * 原由：餐饮，购物，工资，公积金等
+     * 账户[com.qjs.database.flow.FlowAccount]
      */
-    var reasonType: Int
+    var account: Int,
+    /**
+     * 原由：餐饮，购物，工资，公积金等
+     * [com.qjs.database.flow.FlowReason]
+     */
+    var reason: Int,
+    var note: String
 
 ) : Parcelable {
     companion object {
-        const val TableName = "income_expenditure_detail"
+        const val TableName = "flow_detail"
     }
 }
