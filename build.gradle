@@ -24,9 +24,10 @@ buildscript {
         ]
 
         build_version = [
-                compileSdkVersion: 29,
-                minSdkVersion    : 21,
-                targetSdkVersion : 26,
+                compileSdkVersion: 30,
+                minSdkVersion    : 23,
+                targetSdkVersion : 30,
+                buildToolVersion : '29.0.3',
                 versionCode      : 1,
                 versionName      : '0.0.1'
         ]
